@@ -7,9 +7,10 @@ def depthFirstSearch(root, target):
 
 def LCAForBT(root, e1, e2, where={}):
     '''
-    Given the root node of a BT and two elements, e1 and e2, return the value of the lowest common ancestor of the two nodes.
+    Given the root node of a BT and two elements, e1 and e2, return the value of the lowest common ancestor of the two 
+    nodes.
     '''
-    
+
     if root.val == e1: where[e1] == "here"
     elif depthFirstSearch(root.left, e1): where[e1] = "left"
     elif depthFirstSearch(root.right, e1): where[e1] = "right"
